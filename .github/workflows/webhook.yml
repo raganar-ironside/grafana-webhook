@@ -1,0 +1,12 @@
+name: Run Webhook
+on:
+  repository_dispatch:
+    types:
+      - webhook
+
+jobs:
+  test:
+    runs-on : linux
+    steps:
+      - name: Echo
+        run: echo "Hello world"
